@@ -3,7 +3,8 @@
 
 ## Build Setup
 Run the following cmd the backend folder (cd Seminar/Seminar_Backend)
-python3 manage.py runserver
+
+$ python3 manage.py runserver
 
 
 ## Perquisites (In case of new VM) :
