@@ -1,4 +1,3 @@
-
 import os
 from django.conf import settings
 from django.http import HttpResponse
@@ -6,6 +5,7 @@ import xlsxwriter
 from registration.models import Seminar, Participant, Participant2Seminar
 
 
+# create and download an Excel master sheet from the database data
 def DownloadView(request):
 
     workbook = xlsxwriter.Workbook('mastersheet.xlsx')
@@ -17,7 +17,7 @@ def DownloadView(request):
 
     worksheet.write(0, 1, "gender", bold)
     worksheet.write(0, 2, "name", bold)
-    worksheet.write(0, 3, "geb", bold)
+    worksheet.write(0, 3, "birthday", bold)
     worksheet.write(0, 4, "address", bold)
     worksheet.write(0, 5, "telephone", bold)
     worksheet.write(0, 6, "memberNr", bold)

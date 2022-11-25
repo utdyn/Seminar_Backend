@@ -88,8 +88,6 @@ DATABASES = {
 }
 
 
-#DATABASES['default'] = dj_database_url.config()
-   # 'mongodb+srv://ahta0002:changemepls@seminardb.m9bdntr.mongodb.net/')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

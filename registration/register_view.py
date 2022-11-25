@@ -1,16 +1,12 @@
-from django.http import JsonResponse, HttpResponse
-from rest_framework.views import APIView
+from django.http import JsonResponse
 from rest_framework.utils import json
-import logging
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
-from django.contrib.auth.models import User
+from rest_framework.views import APIView
 
 from registration.models import Participant, Participant2Seminar, Seminar
 
 
 class RegisterView(APIView):
-
+    # return the new Participant id after saving it is data
     def put(self, request):
 
         form = json.loads(request.body.decode('utf-8'))['content']
@@ -38,4 +34,4 @@ class RegisterView(APIView):
                                     pref="primary")
             p.save()
 
-        return JsonResponse({'instance_id': user.id})
+        return JsonResponse({'id': user.id})

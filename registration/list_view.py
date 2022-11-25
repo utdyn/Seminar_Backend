@@ -1,16 +1,11 @@
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse
 from rest_framework.views import APIView
-from rest_framework.utils import json
-import logging
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
-from django.contrib.auth.models import User
 
-from registration.models import Participant, Seminar, Slot
+from registration.models import Seminar, Slot
 
 
 class ListView(APIView):
-
+    # return Json file with Seminar list
     def get(self, request):
 
         seminar_list = list(Seminar.objects.values())
